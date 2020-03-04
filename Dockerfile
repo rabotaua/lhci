@@ -12,6 +12,7 @@ RUN apt-get install -y google-chrome-stable --no-install-recommends
 # Install Lighthouse CI
 RUN npm install -g @lhci/cli@0.3.9
 RUN npm install -g lighthouse
+RUN PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true npm install -g puppeteer
 
 # Setup a user to avoid doing everything as root
 RUN groupadd --system lhci && \
