@@ -9,7 +9,7 @@ Original docs can be found [here](https://github.com/GoogleChrome/lighthouse-ci#
 # Usage example
 
 ```bash
-docker run -it --rm  --cap-add=SYS_ADMIN -v $PWD:/data -w /data rabotaua/lhci lhci collect --numberOfRuns=1 --url="https://m.rabota.ua/"
+docker run -it --rm  --cap-add=SYS_ADMIN -v $PWD:/data -w /data rabotaua/lhci lhci collect --numberOfRuns=1 --url="https://m.robota.ua/"
 ```
 
 # Auth
@@ -19,7 +19,7 @@ docker run -it --rm  --cap-add=SYS_ADMIN -v $PWD:/data -w /data rabotaua/lhci lh
 ```js
 module.exports = async (browser, context) => {
   const page = await browser.newPage();
-  await page.goto("https://m.rabota.ua/account/login");
+  await page.goto("https://m.robota.ua/account/login");
   await page.type("#email", "marchenko.alexandr@gmail.com");
   await page.type("#password", "*************");
   await page.click('input[type="submit"]');
@@ -28,7 +28,7 @@ module.exports = async (browser, context) => {
 ```
 
 ```bash
-docker run -it --rm  --cap-add=SYS_ADMIN -v $PWD:/data -w /data rabotaua/lhci lhci collect --numberOfRuns=1 --url="https://m.rabota.ua/notepad/cvlist" --puppeteerScript="script.js"
+docker run -it --rm  --cap-add=SYS_ADMIN -v $PWD:/data -w /data rabotaua/lhci lhci collect --numberOfRuns=1 --url="https://m.robota.ua/notepad/cvlist" --puppeteerScript="script.js"
 ```
 
 # Reports
